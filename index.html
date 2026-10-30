@@ -13,9 +13,9 @@
 <body>
 
 <h1>Privacy Policy for Hidaya</h1>
-<p class="updated">Last updated: August 2026</p>
+<p class="updated">Last updated: October 2026</p>
 
-<p>Hidaya ("the app", "we", "our") is an Islamic lifestyle app developed to help Muslims with prayer times, Quran study, dua, halal/boycott scanning, health tracking, and Islamic learning for kids. This policy explains what information the app accesses, why, and how it is handled.</p>
+<p>Hidaya ("the app", "we", "our") is an Islamic lifestyle app developed to help Muslims with prayer times, Quran study, dua, halal/boycott scanning, and Islamic learning for kids. This policy explains what information the app accesses, why, and how it is handled.</p>
 
 <h2>No account required</h2>
 <p>Hidaya does not require you to create an account, sign in, or provide your name, email, or any personal identifier to use the app. Any name or profile you enter (e.g. a Kids Learning profile) is stored only on your device.</p>
@@ -24,9 +24,8 @@
 <h2>Data stored on your device only</h2>
 <p>The following information is stored locally on your phone and is never uploaded to any server we control:</p>
 <ul>
-  <li>Prayer time settings, calculation method, and location coordinates used to calculate prayer times</li>
+  <li>Prayer time settings, calculation method, and your chosen city or last known location</li>
   <li>Quran reading progress, bookmarks, memorization (Hifz) progress, and daily reading goals</li>
-  <li>Health Monitor data: step counts, heart rate readings, water intake, weight/BMI entries</li>
   <li>Kids Learning profiles: child names/avatars you create, story progress, quiz scores, and stars</li>
   <li>Scanned/learned product barcodes (Sumud Scan / Halal Scan) that you personally identify</li>
   <li>App theme, language, and other preferences</li>
@@ -35,11 +34,10 @@
 
 <h2>Permissions the app requests, and why</h2>
 <ul>
-  <li><strong>Location:</strong> to calculate accurate prayer times and Qibla direction for your area. Location is used locally on-device and is not transmitted to us.</li>
-  <li><strong>Camera:</strong> to scan product barcodes/labels (Sumud Scan, Halal Scan), to measure heart rate via the camera lens (Health Monitor), and to scan printed mosque prayer timetables (OCR). Photos are processed on-device or sent only to the specific third-party service needed to complete that feature (see below) and are not stored by us.</li>
-  <li><strong>Microphone:</strong> for the Tajweed recitation feedback feature and the Live Khutba Translator, which need to hear your voice or the sermon being translated. Audio is processed for the immediate purpose only and is not stored by us.</li>
+  <li><strong>Location:</strong> to calculate accurate prayer times and Qibla direction for your area. Your approximate coordinates are sent over an encrypted connection to the AlAdhan prayer-times service and to OpenStreetMap Nominatim (to show your city name). We, the developer, do not receive or store your location.</li>
+  <li><strong>Camera:</strong> to scan product barcodes/labels (Sumud Scan, Halal Scan), and to scan printed mosque prayer timetables (OCR). Photos are processed on-device or sent only to the specific third-party service needed to complete that feature (see below) and are not stored by us.</li>
+  <li><strong>Microphone:</strong> for the Tajweed recitation feedback feature and the Live Khutba Translator, which need to hear your voice or the sermon being translated. Before any audio leaves your phone the app tells you where it is sent. Audio is not stored by us.</li>
   <li><strong>Notifications:</strong> to deliver athan (prayer call) alerts, prayer time reminders, and weekly Kids Learning progress summaries.</li>
-  <li><strong>Health Connect / Activity Recognition:</strong> to read step count and other fitness data from Health Connect (if you choose to connect a smartwatch or fitness app) for the Health Monitor feature.</li>
   <li><strong>Storage (photos/files):</strong> to let you import a scanned mosque timetable file or PDF Quran, and to save/share content you create.</li>
 </ul>
 
@@ -48,8 +46,11 @@
 <ul>
   <li><strong>Barcode/product lookup:</strong> product barcodes are sent to Open Food Facts, Open Beauty/Products Facts, and UPCitemdb to identify products.</li>
   <li><strong>Boycott data:</strong> brand/company boycott information is downloaded from the public Tech For Palestine dataset.</li>
-  <li><strong>AI features (Premium):</strong> Tajweed recitation feedback and Hifz Memorization's listening feature send short audio clips of your recitation to Groq (groq.com), a third-party AI provider, for speech-to-text transcription (Whisper model), so the app can compare what you recited against the Quran text. Live Khutba Translation uses on-device speech recognition and translation (Android's built-in speech recognizer and Google ML Kit, which runs on-device) to convert and translate speech. In both cases, audio is processed for the immediate purpose only, is not stored by us, and is not retained by Groq after transcription.</li>
-  <li><strong>Quran audio/text:</strong> Quran recitations, translations, and tafsir content are fetched from public Quran content APIs (e.g. alquran.cloud, Tech-for-Palestine-hosted tafsir mirrors) as needed.</li>
+  <li><strong>AI features:</strong> Tajweed recitation feedback and Hifz Memorization's listening feature send short audio clips of your recitation to Groq (groq.com), a third-party AI provider, for speech-to-text transcription (Whisper model), so the app can compare what you recited against the Quran text. Live Khutba Translation uses Android's built-in speech recognizer, which on most phones sends the audio to Google's speech servers, and Google ML Kit for translation (the translation models are downloaded to your phone). We do not store any of this audio. Groq and Google handle the audio under their own privacy policies; please read them.</li>
+  <li><strong>Quran audio/text:</strong> Quran text, translations, tafsir and recitation audio are fetched as needed from alquran.cloud, quran.com, android.quran.com (mushaf page images), everyayah.com and jsDelivr/GitHub (tafsir files). These services see your IP address and the content you request.</li>
+  <li><strong>Prayer times and location:</strong> AlAdhan (api.aladhan.com) and OpenStreetMap Nominatim receive your approximate coordinates to return prayer times, your city and the Hijri date.</li>
+  <li><strong>Sharing a mosque timetable:</strong> when you create a share link, the link is shortened through a public URL-shortener (is.gd, TinyURL or CleanURI), which receives the link you share.</li>
+  <li><strong>Translation models:</strong> Google ML Kit downloads language models to your phone when you first use translation or text recognition. Reading product labels and mosque timetables from photos is done on your phone.</li>
 </ul>
 <p>These third parties process data under their own privacy policies. We do not sell, rent, or share your personal data with advertisers, and Hidaya contains no advertising and no third-party ad trackers.</p>
 
